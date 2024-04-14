@@ -30,7 +30,7 @@ public class PlayerHealth : MonoBehaviour
     public void UpdateHealthUI()
     {
 
-        Debug.Log(health);
+        //Debug.Log(health);
         HealthText.text = "Health: " + health;
         
 
