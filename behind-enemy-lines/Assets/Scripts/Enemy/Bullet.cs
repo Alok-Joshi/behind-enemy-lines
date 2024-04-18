@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private void onCollisonEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("bullet hit");
-        Transform hitTransform = collision.transform;
-        if (hitTransform.CompareTag("Player"))
+       
+        Transform hitTransform = other.transform;
+        
+        if (other.CompareTag("Player"))
         {
             Debug.Log("Hit Player");
             hitTransform.GetComponent<PlayerHealth>().TakeDamage(10);
