@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -23,6 +24,11 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(health == 0)
+        {
+             SceneManager.LoadSceneAsync(3);
+
+        }
         health = Mathf.Clamp(health, 0, maxHealth);
         UpdateHealthUI();
         
