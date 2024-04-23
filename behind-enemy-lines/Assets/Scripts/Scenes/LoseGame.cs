@@ -8,7 +8,6 @@ public class LoseGame : MonoBehaviour
 {
     public void PlayGame()
     {
-        Debug.Log("PLAY GAME");
         SceneManager.LoadSceneAsync(1);
     }
     public void QuitGame()
