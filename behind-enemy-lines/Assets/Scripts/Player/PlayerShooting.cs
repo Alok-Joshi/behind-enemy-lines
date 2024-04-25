@@ -24,7 +24,7 @@ public class PlayerShooting : MonoBehaviour
             
             GameObject bullet = GameObject.Instantiate(Resources.Load("Prefabs/Bullet") as GameObject, gunBarrel.transform.position, this.transform.rotation);
             Vector3 shootDirection = (this.transform.position - gunBarrel.transform.position).normalized;
-            bullet.GetComponent<Rigidbody>().velocity = this.transform.forward * 40;
+            bullet.GetComponent<Rigidbody>().velocity = this.transform.forward * BulletSpeed;
             
         }
     }
